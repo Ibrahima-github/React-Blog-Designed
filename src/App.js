@@ -4,19 +4,19 @@ import {Posts} from './pages/Posts';
 import {Developpement} from './pages/Developpement';
 import {Cryptomonnaie} from './pages/Cryptomonnaie';
 import {Youtube} from './pages/Youtube';
-import {Connexion} from './pages/Connexion';
+import {Login} from './pages/Login';
 
-import {Navigation} from './Navigation';
+import {Navigation} from './components/Navigation';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
+      <Navigation />
       <div className="container">
-        <h3 className="m-3 d'flex justify-content-left">Bienvenue sur mon blog</h3>
+        <h3 className="d-flex justify-content-center">Bienvenue sur mon blog</h3>
       
 
-      <Navigation />
 
       <Switch>
         <Route path='/' component={Home} exact/>
@@ -24,7 +24,7 @@ function App() {
         <Route path='/developpement' component={Developpement}/>
         <Route path='/cryptomonnaie' component={Cryptomonnaie}/>
         <Route path='/youtube' component={Youtube}/>
-        <Route path='/connexion' component={Connexion} />
+        <Route path='/login' component={Login} />
       </Switch>
       </div>
     </BrowserRouter>

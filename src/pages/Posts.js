@@ -27,7 +27,7 @@ export const Posts = () => {
 
     return(
         <div className="d-flex justify-content-center">
-            Page publications
+           
 
             <div className='Article'>
             {posts.map(post=>
@@ -39,6 +39,9 @@ export const Posts = () => {
                             uploaded={post.ArticleUploadDate}
                             description={post.PostDescription}
                             url={post.PostYoutubeHref}
+                            adsTitle={post.AdsTitle}
+                            adsImageFileName={post.AdsImageFileName}
+                            adsLink={post.AdsLink}
                         />
                         )}
             </div>

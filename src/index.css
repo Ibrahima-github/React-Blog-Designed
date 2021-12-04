@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card-container{
+  border: 1px solid black;
+}
+
+.wrap-element{
+  border: 1px solid black;
+  
+}
+
+.border-top{
+  margin: 20px;
+}
+
+#article{
+  margin: 20px;
+}
