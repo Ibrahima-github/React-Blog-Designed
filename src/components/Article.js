@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export function Article({title, uploaded, description, url, adsTitle, adsLink, adsImageFileName}){
+export function Article({title, category,uploaded, description, url, adsTitle, adsLink, adsImageFileName}){
     return(
     <div>
         <div className="d-flex justify-content-center" id="a
@@ -22,6 +22,7 @@ export function Article({title, uploaded, description, url, adsTitle, adsLink, a
 
                         </div>
                     </div>
+                    <div>{category}</div>
                     <div className="border-top">
 
                         <p>Article écrit le {uploaded}</p>

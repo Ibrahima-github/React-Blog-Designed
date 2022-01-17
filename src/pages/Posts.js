@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Article} from '../components/Article';
 
-export const Posts = () => {
+const Posts = () => {
 
     const [posts, setPosts] = useState([]);
 
@@ -48,3 +48,4 @@ export const Posts = () => {
         </div>
     )
 }
+export default Posts;
