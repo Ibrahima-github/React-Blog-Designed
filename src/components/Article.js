@@ -25,7 +25,7 @@ export function Article({title, category,uploaded, description, url, adsTitle, a
                     <div>{category}</div>
                     <div className="border-top">
 
-                        <p>Article écrit le {uploaded}</p>
+                        <p>Article uploadée le {uploaded}</p>
                         <p className='card-text'>{description}</p>
                     </div>
                 </div>
