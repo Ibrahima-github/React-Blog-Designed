@@ -7,19 +7,20 @@ const Posts = () => {
 
     
     useEffect(() => {
-        fetch(process.env.REACT_APP_API+'posts')
+        fetch(process.env.REACT_APP_API+'posts',  {mode : 'no-cors'})
             .then(response => {
-                if(response.status === 200){
+                
                    return response.json()
-                }
-                throw response;
+                
+                
+                
             }    )
             .then(data => {
                 console.log(data);
                 setPosts(data.reverse());
             })
             .catch(error => {
-                console.error(error.message)
+                //console.error(error.message)
             }); 
 
     }, []);
