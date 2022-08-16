@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 
 const Article = () => {
 
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState({
+        data: []
+    });
     const {id} = useParams();
     
     useEffect(() => {
@@ -17,7 +19,7 @@ const Article = () => {
             }    )
             .then(data => {
                 //console.log(data);
-                setPosts(data);
+                setPosts({data: data});
             })
             .catch(error => {
                 //console.error(error.message)

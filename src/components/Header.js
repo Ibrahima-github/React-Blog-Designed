@@ -91,7 +91,7 @@ return(
     </div>
   
   </div>
-  
+  <h3 >Bienvenue sur mon blog</h3>
   <p className="scrolldown">
     <a className="smoothscroll" href="#about">
   
@@ -99,7 +99,7 @@ return(
     </a>
   </p>
   </header>
-  <h3 >Bienvenue sur mon blog</h3>
+  
   </div>
 )
 }
