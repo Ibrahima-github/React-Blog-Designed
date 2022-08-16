@@ -30,9 +30,12 @@ const Posts = () => {
    
 
     return(
+
+
+      <div className="container">
+           <Header />
         <div className="d-flex justify-content-center">
            
-           <Header />
 
             <div className='Article'>
                 
@@ -40,6 +43,7 @@ const Posts = () => {
             
                         <Card 
                             key={post.PostId}
+                            id={post.PostId}
                             title={post.PostName}
                             category={post.Category}
                             uploaded={post.ArticleUploadDate}
@@ -48,6 +52,7 @@ const Posts = () => {
                         />
                         )}
             </div>
+        </div>
             <Footer />
         </div>
     )

@@ -1,16 +1,17 @@
 
 import React from "react";
 import { Button } from "react-bootstrap";
-import {  Redirect } from "react-router-dom";
+import {  useHistory } from "react-router-dom";
 
 
-export function Card({title, category,uploaded, description, url, adsTitle, adsLink, adsImageFileName}){
+export function Card({title, category,uploaded, description, url, id, adsLink, adsImageFileName}){
 
-     const RedirectToArticle =  () => {
-       return   <Redirect to="/posts/:id" />
-    }
+    //  const RedirectToArticle =  () => {
+    //    return   <Redirect to="/posts/:id" />
+    // }
+    const history = useHistory();
     return(
-    <div>
+    <div  >
         <div className="d-flex justify-content-center block-example border border-dark" id="a
         rticle"  style={{borderRadius:0.5, margin:50}}>
 
@@ -32,7 +33,7 @@ export function Card({title, category,uploaded, description, url, adsTitle, adsL
                     <div>Catégories: {category}</div>
                     <div >
 
-                        <p className='card-text'>{description}</p><Button className="btn btn-primary" onClick={RedirectToArticle} />
+                        <p className='card-text'>{description}</p><Button style={{height:40, width:40}} className="btn btn-primary" onClick={() =>  history.push(`article/${id}`)} />
                         <p className="border-top">Article uploadé le {uploaded}</p>
                     </div>
                 </div>

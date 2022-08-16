@@ -14,8 +14,8 @@ function App() {
           <BrowserRouter>
             
             <Switch>
-              <Route path='/' component={Posts} />
-              <Route path='/posts/:id' component={Article} />
+              <Route path='/' component={Posts} exact/>
+              <Route path='/article/:id' component={Article} />
             </Switch>
           </BrowserRouter> 
           //  <Posts /> 

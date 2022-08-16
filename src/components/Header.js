@@ -11,8 +11,6 @@ return(
     
 
 
-      <div className="container">
-
 
 
 
@@ -100,7 +98,6 @@ return(
   </p>
   </header>
   
-  </div>
 )
 }
 
