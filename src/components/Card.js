@@ -1,11 +1,17 @@
 import React from "react";
+import { Button } from "react-bootstrap";
+import {  Redirect } from "react-router-dom";
 
 
-export function Article({title, category,uploaded, description, url, adsTitle, adsLink, adsImageFileName}){
+export function Card({title, category,uploaded, description, url, adsTitle, adsLink, adsImageFileName}){
+
+     const RedirectToArticle =  () => {
+       return   <Redirect to="/posts/:id" />
+    }
     return(
     <div>
-        <div className="d-flex justify-content-center" id="a
-        rticle">
+        <div className="d-flex justify-content-center block-example border border-dark" id="a
+        rticle"  style={{borderRadius:0.5, margin:50}}>
 
             <div className='card-container d-flex justify-content-center'>
                 <div className='card-body '>
@@ -22,16 +28,16 @@ export function Article({title, category,uploaded, description, url, adsTitle, a
 
                         </div>
                     </div>
-                    <div>{category}</div>
-                    <div className="border-top">
+                    <div>Catégories: {category}</div>
+                    <div >
 
-                        <p>Article uploadée le {uploaded}</p>
-                        <p className='card-text'>{description}</p>
+                        <p className='card-text'>{description}</p><Button className="btn btn-primary" onClick={RedirectToArticle} />
+                        <p className="border-top">Article uploadé le {uploaded}</p>
                     </div>
                 </div>
             </div>
         </div>
-            <div id="pub" className="text-center">
+            {/* <div id="pub" className="text-center">
                 <p>{adsTitle}</p>
                 <a href={adsLink} target="blank"><img 
                                     width="275px"
@@ -40,8 +46,10 @@ export function Article({title, category,uploaded, description, url, adsTitle, a
                                     className="rounded"
                                     alt="pub"/>
                 </a>
-            </div>
+            </div> */}
 
     </div>        
     )
 }
+
+export default Card;

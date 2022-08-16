@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import {Article} from '../components/Article';
+import Card from '../components/Card';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const Posts = () => {
 
@@ -7,8 +9,8 @@ const Posts = () => {
 
     
     useEffect(() => {
-        fetch(process.env.REACT_APP_API+'posts',  {mode : 'no-cors'})
-            .then(response => {
+        fetch(process.env.REACT_APP_API+'posts')
+            .then((response) => {
                 
                    return response.json()
                 
@@ -29,23 +31,23 @@ const Posts = () => {
     return(
         <div className="d-flex justify-content-center">
            
+           <Header />
 
             <div className='Article'>
+                
             {posts.map(post=>
             
-                        <Article 
+                        <Card 
                             key={post.PostId}
                             title={post.PostName}
                             category={post.Category}
                             uploaded={post.ArticleUploadDate}
                             description={post.PostDescription}
                             url={post.PostYoutubeHref}
-                            adsTitle={post.AdsTitle}
-                            adsImageFileName={post.AdsImageFileName}
-                            adsLink={post.AdsLink}
                         />
                         )}
             </div>
+            <Footer />
         </div>
     )
 }
