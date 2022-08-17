@@ -12,8 +12,7 @@ export function Card({title, category,uploaded, description, url, id, adsLink, a
     const history = useHistory();
     return(
     <div  >
-        <div className="d-flex justify-content-center block-example border border-dark" id="a
-        rticle"  style={{borderRadius:0.5, margin:50}}>
+        <div className="d-flex justify-content-center block-example border border-dark"  style={{borderRadius:0.5, margin:50}}>
 
             <div className='card-container d-flex justify-content-center'>
                 <div className='card-body '>
@@ -21,8 +20,8 @@ export function Card({title, category,uploaded, description, url, id, adsLink, a
                         <h5>{title}</h5>
                     </div>
                     <div className='image-container d-flex justify-content-center'>
-                        <div className="wrap-element">
-                            <iframe className="wrapped-iframe" src={url} 
+                        <div className="ratio ratio-16x9">
+                            <iframe cwidth="560" height="315"  src={url} 
                             title="YouTube video player" 
                             frameBorder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -33,7 +32,7 @@ export function Card({title, category,uploaded, description, url, id, adsLink, a
                     <div>Catégories: {category}</div>
                     <div >
 
-                        <p className='card-text'>{description}</p><Button style={{height:40, width:40}} className="btn btn-primary" onClick={() =>  history.push(`article/${id}`)} />
+                        <p className='card-text'>{description}</p><Button  className="btn btn-primary" onClick={() =>  history.push(`article/${id}`)}>Lire l'article</Button>
                         <p className="border-top">Article uploadé le {uploaded}</p>
                     </div>
                 </div>

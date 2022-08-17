@@ -33,21 +33,31 @@ const Article = () => {
     return(
         
         
-        <div className='Article' key={posts.data.PostId}>
-                <div className="d-flex justify-content-center">
-                        <h1 style={{fontSize : 30}}>{posts.data.PostName}</h1>
-                        <h2>{posts.data.Category}</h2>
+        <div className="d-flex justify-content-center" key={posts.data.PostId}>
+                <div >
+                
 
-                        <div className="wrap-element">
-                            <iframe className="wrapped-iframe" src={posts.data.PostYoutubeHref} 
+                        <h1 className="d-flex justify-content-center" style={{fontSize : 50, marginTop:200}}>{posts.data.PostName}</h1>
+                        
+                    
+
+                        <div className="ratio ratio-16x9 d-flex justify-content-center" style={{margin: 150}}>
+                            <iframe  width="560" height="315" src={posts.data.PostYoutubeHref} 
                             title="YouTube video player" 
-                            frameBorder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowFullScreen></iframe>
 
                         </div>
-                        <p style={{marginTop : 20}}>{posts.data.PostDescription}</p>
-                        <p>{posts.data.ArticleUploadDate}</p>   
+                        <div className="d-flex justify-content-center" >
+
+                        <div>
+
+                        <p style={{maxWidth: 700}}>{posts.data.PostDescription}</p>
+
+                        <p>Catégorie: {posts.data.Category}</p>
+                        <p>Publié le : {posts.data.ArticleUploadDate}</p>   
+                        </div>
+                        </div>
                          
                         
             </div>
